@@ -1,1 +1,16 @@
 Hello world!
+void PrintNaturalsDidgit(int count, int N)
+{
+    if (count <= N)
+    {
+        Console.Write(count + " ");
+        PrintNaturalsDidgit(count + 1, N);
+    }
+}
+
+Console.WriteLine("Введите натуральное число М: ");
+int M = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите натуральное число N: ");
+int N = Convert.ToInt32(Console.ReadLine());
+PrintNaturalsDidgit(M, N);
