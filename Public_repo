@@ -1,4 +1,3 @@
-Hello world!
 void PrintNaturalsDidgit(int count, int N)
 {
     if (count <= N)
