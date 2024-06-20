@@ -1,6 +1,6 @@
-//Задача 1: Задайте значения M и N. 
+//Задача 1: 
+//Задайте значения M и N. 
 //Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
-
 //Использовать рекурсию, не использовать циклы.
 
 void PrintNaturalsDidgit(int count, int N)
@@ -45,3 +45,39 @@ int N = Convert.ToInt32(Console.ReadLine());
 
 int res = Ackermann(M, N);
 Console.WriteLine(res);
+
+// Задача 3:
+// Задайте произвольный массив. Выведете его элементы, начиная с конца. 
+// Использовать рекурсию, не использовать циклы.
+// [1, 2, 5, 0, 10, 34] => 34 10 0 5 2 1
+
+void PrintArray(int[] array)
+        {
+	        Console.Write("[");
+	        for(int i = 0; i < array.Length;i++)
+	        {
+		        if(i < array.Length - 1)
+		        {
+			        Console.Write($"{array[i]}, ");
+		        }
+		        else
+		        {
+			        Console.Write($"{array[i]}");
+		        }	
+	        }
+	        Console.Write("]");
+	   }
+
+        void PrintArrayReverse (int[] arr, int index = 0)
+        {
+	        if(index != arr.Length)
+	        {
+		        PrintArrayReverse (arr, index + 1);
+		        Console.Write($"{arr[index]} ,");
+	        }
+        }
+
+        int[] array = {1, 2, 5, 0, 10, 34};
+        PrintArray(array);
+        Console.Write($" => ");
+        PrintArrayReverse(array);
